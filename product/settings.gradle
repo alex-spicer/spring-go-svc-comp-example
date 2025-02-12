@@ -1,0 +1,3 @@
+// settings.gradle
+rootProject.name = 'spring-go-svc-comp-example'
+include 'product-svc'
