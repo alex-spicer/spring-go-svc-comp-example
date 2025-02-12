@@ -8,7 +8,7 @@ accompanies a blog series exploring how common web service patterns are implemen
 ```
 .
 ├── product/          # Spring Boot implementation (Java 23)
-├── product-go/       # Go implementation (Go 1.22)
+├── product-go/       # Go implementation (Go 1.23.6)
 └── docker-compose.yml
 ```
 
