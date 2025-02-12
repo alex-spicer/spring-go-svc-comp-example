@@ -1,39 +1,37 @@
 package com.example.product.service;
 
 import com.example.product.model.Product;
+import com.example.product.repository.InMemoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class ProductService {
-    private final Map<Long, Product> products = new ConcurrentHashMap<>();
-    private final AtomicLong idGenerator = new AtomicLong(1);
+    private final InMemoryRepository repository;
+
+    public ProductService(InMemoryRepository repository) {
+        this.repository = repository;
+    }
 
     public List<Product> getAllProducts() {
-        return List.copyOf(products.values());
+        return repository.getAllProducts();
     }
 
     public Optional<Product> getProduct(Long id) {
-        return Optional.ofNullable(products.get(id));
+        return repository.getProduct(id);
     }
 
     public Product createProduct(Product product) {
-        Long id = idGenerator.getAndIncrement();
-        Product newProduct = product.withId(id);
-        products.put(id, newProduct);
-        return newProduct;
+        return repository.createProduct(product);
     }
 
     public Optional<Product> updateProduct(Long id, Product product) {
-        return Optional.ofNullable(products.replace(id, product.withId(id)));
+        return repository.updateProduct(id, product);
     }
 
     public boolean deleteProduct(Long id) {
-        return products.remove(id) != null;
+        return repository.deleteProduct(id);
     }
 }
