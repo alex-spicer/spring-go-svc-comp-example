@@ -56,8 +56,8 @@ DELETE /api/products/:id # Delete product
 
 ## Blog Posts
 
-- [Part 1: Dependency Injection and Composition](https://medium.com/@amspicer/side-by-side-java-spring-boot-go-9e642e740e84)
-- Part 2: Routing and HTTP Handlers
+- [Part 1: Dependency Injection and Composition](https://amspicer.medium.com/side-by-side-java-spring-boot-go-9e642e740e84)
+- [Part 2: Routing and HTTP Handlers](https://amspicer.medium.com/side-by-side-java-spring-boot-go-e1bab8159f78)
 - Part 3: Middleware and Interceptors
 - Part 4: Error Handling
 - Part 5: Concurrency Patterns
