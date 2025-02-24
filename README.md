@@ -14,7 +14,7 @@ accompanies a blog series exploring how common web service patterns are implemen
 
 ## Requirements
 
-- Amazon Corretto 23
+- Java 23+
 - Go 1.23+
 - Docker & Docker Compose
 - Make
@@ -58,7 +58,7 @@ DELETE /api/products/:id # Delete product
 
 - [Part 1: Dependency Injection and Composition](https://amspicer.medium.com/side-by-side-java-spring-boot-go-9e642e740e84)
 - [Part 2: Routing and HTTP Handlers](https://amspicer.medium.com/side-by-side-java-spring-boot-go-e1bab8159f78)
-- Part 3: Middleware and Interceptors
+- [Part 3: Middleware and Interceptors](https://amspicer.medium.com/side-by-side-spring-boot-go-749dafa7f285)
 - Part 4: Error Handling
 - Part 5: Concurrency Patterns
 
